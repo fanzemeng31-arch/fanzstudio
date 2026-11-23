@@ -4,7 +4,7 @@ This is the static website of FanzStudio, a studio opened in November 2026 and r
 
 The site is plain HTML and one stylesheet, `style.css`, with no build step. The pages are `index.html`, `advertisement.html`, `design.html`, `academic.html`, `programming.html`, `figures.html`, a Simplified Chinese page (`zh.html`) and a short report on 40 manufacturer websites (`geo-benchmark.html`, `geo-benchmark-zh.html`).
 
-Public address: https://fanzemeng31-arch.github.io/fanzstudio/
+Public address: https://fanzstudio.org/
 Repository: https://github.com/fanzemeng31-arch/fanzstudio
 Contact: fanze.meng@fanzstudio.org
 

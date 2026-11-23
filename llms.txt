@@ -2,16 +2,16 @@
 
 > FanzStudio is a studio in the United Kingdom, opened in November 2026 and run by Fanze Meng. It checks whether AI assistants such as ChatGPT can read a small business website, fixes what stops them, builds websites for small businesses in any trade, online shops included, and draws figures for research papers from the client's data, and writes small applications. Fanze Meng, a PhD candidate at University College London and a research assistant at the Chinese Academy of Strategic Studies on Industrial Competency, runs it and is responsible for every job, the contract and the payment.
 
-Website: https://fanzemeng31-arch.github.io/fanzstudio/
-Chinese version: https://fanzemeng31-arch.github.io/fanzstudio/zh.html
+Website: https://fanzstudio.org/
+Chinese version: https://fanzstudio.org/zh.html
 Contact: fanze.meng@fanzstudio.org (email only)
 
 ## The four categories
 
-- Advertisement: the free check, GEO audit and GEO fixes. https://fanzemeng31-arch.github.io/fanzstudio/advertisement.html
-- Design: websites for small businesses in any trade. https://fanzemeng31-arch.github.io/fanzstudio/design.html
-- Academic: Reference Audit and figures for research papers. https://fanzemeng31-arch.github.io/fanzstudio/academic.html (figures: https://fanzemeng31-arch.github.io/fanzstudio/figures.html)
-- Programming: small applications. https://fanzemeng31-arch.github.io/fanzstudio/programming.html
+- Advertisement: the free check, GEO audit and GEO fixes. https://fanzstudio.org/advertisement.html
+- Design: websites for small businesses in any trade. https://fanzstudio.org/design.html
+- Academic: Reference Audit and figures for research papers. https://fanzstudio.org/academic.html (figures: https://fanzstudio.org/figures.html)
+- Programming: small applications. https://fanzstudio.org/programming.html
 
 ## Free check
 
@@ -23,7 +23,7 @@ Email a website address to the contact address. A program checks the homepage on
 - GEO fixes, from £350. The changes from the audit are made on the site. No promise is made about what any AI assistant will say afterwards.
 - Website: one page from £180; up to five pages from £450; a product catalogue or shop front of up to 30 products from £700. For a small business in any trade. Static files, works on phones, the client owns the code. Delivery 3 to 7 days.
 - Small applications, from £400: a question-answering app over the client's own documents, a small web app, or a WeChat mini-program. Delivery 1 to 2 weeks.
-- Figures for research papers: £30 for one figure with up to 2 panels, £60 for one figure with up to 6 panels. The client emails a data file (CSV or Excel), the question the figure must answer, and the journal or the width. Delivered: vector PDF, SVG, 300 dpi PNG, the Python script that draws the figure, a statistics note and a draft caption. Terms for figures differ from the other services: a small preview image comes back within two working days free of charge, the client pays the full price through a Stripe payment link only if they want the files, and one round of changes is included. Data are never invented, changed or left out. Photographs, gels, blots and microscope images are not edited; drawn illustrations and figures that need R packages are not offered. The contents of the data file pass through other companies' services; the file is deleted 30 days after delivery; data that identifies a person must not be sent. Details and samples: https://fanzemeng31-arch.github.io/fanzstudio/figures.html
+- Figures for research papers: £30 for one figure with up to 2 panels, £60 for one figure with up to 6 panels. The client emails a data file (CSV or Excel), the question the figure must answer, and the journal or the width. Delivered: vector PDF, SVG, 300 dpi PNG, the Python script that draws the figure, a statistics note and a draft caption. Terms for figures differ from the other services: a small preview image comes back within two working days free of charge, the client pays the full price through a Stripe payment link only if they want the files, and one round of changes is included. Data are never invented, changed or left out. Photographs, gels, blots and microscope images are not edited; drawn illustrations and figures that need R packages are not offered. The contents of the data file pass through other companies' services; the file is deleted 30 days after delivery; data that identifies a person must not be sent. Details and samples: https://fanzstudio.org/figures.html
 
 ## How it works
 
@@ -31,7 +31,7 @@ Email your website address for the free check, or say what you need. A fixed quo
 
 ## What the check program found on 40 manufacturer websites
 
-Run on 2026-11-23 on the homepages of 20 manufacturers in the United Kingdom and 20 in China. No working HTTPS: UK 0 of 20, China 5 of 20. No meta description: UK 1 of 20, China 9 of 18. No JSON-LD structured data: UK 4 of 20, China 14 of 18. No sitemap: UK 3 of 20, China 9 of 18. At least one main AI crawler disallowed in robots.txt: 1 of 38. The sample is small, was not drawn at random and covers manufacturers only. Report: https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark.html
+Run on 2026-11-23 on the homepages of 20 manufacturers in the United Kingdom and 20 in China. No working HTTPS: UK 0 of 20, China 5 of 20. No meta description: UK 1 of 20, China 9 of 18. No JSON-LD structured data: UK 4 of 20, China 14 of 18. No sitemap: UK 3 of 20, China 9 of 18. At least one main AI crawler disallowed in robots.txt: 1 of 38. The sample is small, was not drawn at random and covers manufacturers only. Report: https://fanzstudio.org/geo-benchmark.html
 
 ## Work shown
 
