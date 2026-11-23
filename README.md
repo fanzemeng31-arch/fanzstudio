@@ -1,7 +1,20 @@
 # Plainwork
 
-This is the static website of Plainwork, a freelance studio opened in November 2026 and run by Fanze Meng in London. It has an English page (index.html) and a Simplified Chinese page (zh.html), one shared stylesheet (style.css), and the files search engines and AI assistants read (robots.txt, sitemap.xml, llms.txt).
+This is the static website of Plainwork, a studio opened in November 2026 and run by Fanze Meng in London. The studio checks whether AI assistants can read a small business website, fixes what stops them, and builds websites for small businesses in any trade. The site has an English page (`index.html`), a Simplified Chinese page (`zh.html`) and a short report on 40 manufacturer websites (`geo-benchmark.html`, `geo-benchmark-zh.html`).
 
-The site has no build step, no framework and no JavaScript. The planned public address is https://fanzemeng31-arch.github.io/plainwork/ and the planned repository is https://github.com/fanzemeng31-arch/plainwork.
+## The check program
 
-To preview it locally, open a terminal in this folder and run `python3 -m http.server 8000`, then open http://localhost:8000/ in a browser. Opening index.html directly from the folder also works.
+`tools/geocheck.py` checks how ready a public website is to be read by AI assistants. It needs Python 3.9 or later and nothing else. It makes at most six requests to the site, reads the homepage, `robots.txt`, `llms.txt` and one sitemap file, and names itself in its User-Agent.
+
+```
+python3 tools/geocheck.py yourdomain.com
+python3 tools/geocheck.py yourdomain.com --json
+```
+
+## Preview
+
+The site has no build step and no JavaScript. Run `python3 -m http.server 8000` in this folder and open <http://localhost:8000/>.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).

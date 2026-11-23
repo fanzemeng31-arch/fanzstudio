@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>40 家制造企业网站上的程序检查结果</title>
+<meta name="description" content="一份简短的公开报告：程序检查了英国 20 家和我国 20 家制造企业的首页，看 AI 助手能否读懂。含完整表格和局限说明。">
+<link rel="canonical" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark-zh.html">
+<link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark-zh.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4e79'/%3E%3Cpath d='M9 24V8h8a5 5 0 0 1 0 10h-8' fill='none' stroke='%23fff' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<header class="top"><a class="brand" href="index.html" style="text-decoration:none;color:inherit">Plainwork</a><nav aria-label="语言"><a href="geo-benchmark.html" hreflang="en" lang="en">English</a></nav></header>
+<h1>40 家制造企业网站上的程序检查结果</h1>
+<p class="lede">有些买家请 AI 助手推荐供应商。助手只能介绍网站能被它读懂的公司。这份报告说明 40 家制造企业的网站在多大程度上能被程序读懂。</p>
+<h2>检查了什么，为什么检查</h2>
+<p>程序 <a href="tools/geocheck.py">geocheck.py</a>（0.1 版）在 2026-11-23 检查了每个网站的首页。检查内容包括 HTTPS、robots.txt、不运行 JavaScript 时能看到多少文字、页面描述、结构化数据、站点地图、llms.txt，以及机器可以读取的联系方式。目的是了解哪些基本问题比较常见。</p>
+<p>表中前两行以全部 40 家网站为基数。其余各行只以能够完成检查的网站为基数。网站没有响应，或者测试所用网络的运营商用自己的过滤页面代替了该网站，都算作无法完成检查。通过 HTTPS 访问失败的网站，会再试其 www 地址，然后再试普通 HTTP。</p>
+<h2>结果</h2>
+<p>每个单元格依次写明有该问题的网站数、基数网站数和百分比。</p>
+<div class="tablewrap" tabindex="0" role="region" aria-label="检查结果"><table><thead><tr><th>发现</th><th>英国</th><th>我国</th><th>合计</th></tr></thead><tbody><tr><td>无法完成检查</td><td>0 of 20 (0%)</td><td>2 of 20 (10%)</td><td>2 of 40 (5%)</td></tr><tr><td>裸域名和 www 地址都没有可用的 HTTPS</td><td>0 of 20 (0%)</td><td>5 of 20 (25%)</td><td>5 of 40 (12%)</td></tr><tr><td>robots.txt 禁止了八个主要 AI 爬虫中的至少一个</td><td>0 of 20 (0%)</td><td>1 of 18 (6%)</td><td>1 of 38 (3%)</td></tr><tr><td>存在 Content-Signal 行</td><td>0 of 20 (0%)</td><td>0 of 18 (0%)</td><td>0 of 38 (0%)</td></tr><tr><td>不运行 JavaScript 时文字少于 150 词</td><td>1 of 20 (5%)</td><td>2 of 18 (11%)</td><td>3 of 38 (8%)</td></tr><tr><td>没有 meta 描述</td><td>1 of 20 (5%)</td><td>9 of 18 (50%)</td><td>10 of 38 (26%)</td></tr><tr><td>完全没有 JSON-LD</td><td>4 of 20 (20%)</td><td>14 of 18 (78%)</td><td>18 of 38 (47%)</td></tr><tr><td>没有 Organization 或 LocalBusiness 类型</td><td>5 of 20 (25%)</td><td>14 of 18 (78%)</td><td>19 of 38 (50%)</td></tr><tr><td>没有 Product 类型</td><td>20 of 20 (100%)</td><td>18 of 18 (100%)</td><td>38 of 38 (100%)</td></tr><tr><td>没有站点地图</td><td>3 of 20 (15%)</td><td>9 of 18 (50%)</td><td>12 of 38 (32%)</td></tr><tr><td>没有 llms.txt</td><td>13 of 20 (65%)</td><td>15 of 18 (83%)</td><td>28 of 38 (74%)</td></tr><tr><td>没有机器可读的联系方式（既无 tel: 也无 mailto:）</td><td>6 of 20 (30%)</td><td>8 of 18 (44%)</td><td>14 of 38 (37%)</td></tr></tbody></table></div>
+<h2>网站如何选取</h2>
+<p>20 家英国网站来自 Made in Britain 公开的会员名录（工程行业）。20 家我国网站来自 Valve World Asia 2026 公开的参展商名单。这两个机构都没有参与这项工作。本报告不点名任何公司，也不公布任何单个网站的结果。</p>
+<h2>局限</h2>
+<ul class="list">
+<li>样本很小，只有 40 家网站，也不是随机抽取的，所以这些数字只描述这几家网站。</li>
+<li>我国的网站大多是阀门等流体控制设备的制造商。</li>
+<li>只检查了首页。产品页的情况可能不同。</li>
+<li>“没有 Product 类型”一行只针对首页。首页通常不带产品数据，所以该行 100% 并不说明这些网站在其他页面没有产品数据。</li>
+<li>HTTPS 测试于 2026-11-23 从英国网络发起。换一个网络或换一天，结果可能不同。</li>
+</ul>
+<h2>关于 llms.txt</h2>
+<p>llms.txt 是一项有人提出的约定，指在网站上放一个纯文本文件，向 AI 助手介绍这个网站。AI 厂商尚未确认它们会读取这个文件。表中列出这一行，是因为它容易检查，不应把它看作必须满足的要求。</p>
+<h2>下一步</h2>
+<p>您可以在自己的网站上运行这个程序：下载 <a href="tools/geocheck.py">tools/geocheck.py</a>，运行 <code>python3 geocheck.py yourdomain.com</code>。也可以<a href="mailto:fanzemeng31+plainwork@gmail.com?subject=Free%20GEO%20check&body=Website:%20">发邮件提交网址</a>，申请免费检查。返回<a href="index.html">首页</a>。</p>
+<footer class="small"><p>Plainwork，英国伦敦，2026 年 11 月开业，由 Fanze Meng 经营。</p></footer>
+</main>
+</body>
+</html>

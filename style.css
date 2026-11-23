@@ -25,3 +25,13 @@ ol.steps{padding-left:22px}ol.steps li{margin:6px 0}
 .small{font-size:14px;color:var(--soft)}
 footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line)}
 a,p,li,h1,h2,h3{overflow-wrap:anywhere}
+ul.list{padding-left:22px}ul.list li{margin:6px 0}
+code{font:14px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+pre.cmd{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:10px 12px;overflow-x:auto;margin:0 0 12px}
+pre.cmd code{border:0;padding:0}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;margin:0 0 16px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;background:var(--okbg)}
+tr:last-child td{border-bottom:0}
+.stack{display:grid;gap:12px}
