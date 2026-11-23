@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fanzemeng31-arch.github.io/plainwork/sitemap.xml
+Sitemap: https://fanzemeng31-arch.github.io/fanzstudio/sitemap.xml

@@ -1,22 +1,17 @@
-# Plainwork
+# FanzStudio
 
-This is the static website of Plainwork, a studio opened in November 2026 and run by Fanze Meng in the United Kingdom. The studio checks whether AI assistants can read a small business website, fixes what stops them, and builds websites for small businesses in any trade. The site has an English page (`index.html`), a Simplified Chinese page (`zh.html`) and a short report on 40 manufacturer websites (`geo-benchmark.html`, `geo-benchmark-zh.html`).
+This is the static website of FanzStudio, a studio opened in November 2026 and run by Fanze Meng in the United Kingdom. The studio works in four categories: Advertisement (checks of whether AI assistants can read a small business website), Design (websites for small businesses), Academic (Reference Audit and figures for research papers) and Programming (small applications).
+
+The site is plain HTML and one stylesheet, `style.css`, with no build step. The pages are `index.html`, `advertisement.html`, `design.html`, `academic.html`, `programming.html`, `figures.html`, a Simplified Chinese page (`zh.html`) and a short report on 40 manufacturer websites (`geo-benchmark.html`, `geo-benchmark-zh.html`).
+
+Public address: https://fanzemeng31-arch.github.io/fanzstudio/
+Repository: https://github.com/fanzemeng31-arch/fanzstudio
+Contact: fanze.meng@fanzstudio.org
 
 ## The check program
 
-`tools/geocheck.py` checks how ready a public website is to be read by AI assistants. It needs Python 3.9 or later and nothing else. It makes at most six requests to the site, reads the homepage, `robots.txt`, `llms.txt` and the sitemap, and names itself in its User-Agent. When a site lives in a folder of its host (for example `https://host/shop/`), it looks for `llms.txt` and the sitemap in that folder as well as at the top of the host.
+`tools/geocheck.py` checks how ready a public website is to be read by AI assistants. It needs Python 3.9 or later and nothing else. It makes at most six requests to the site, reads the homepage, `robots.txt`, `llms.txt` and the sitemap, and names itself in its User-Agent.
 
 ```
 python3 tools/geocheck.py yourdomain.com
-python3 tools/geocheck.py yourdomain.com --json
 ```
-
-## Preview
-
-The site has no build step and no JavaScript. Run `python3 -m http.server 8000` in this folder and open <http://localhost:8000/>.
-
-## Licence
-
-MIT. See [LICENSE](LICENSE).
-
-Fonts: Fraunces, IBM Plex Sans and IBM Plex Mono are served from `fonts/` under the SIL Open Font License 1.1.

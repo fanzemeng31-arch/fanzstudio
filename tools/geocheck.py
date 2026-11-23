@@ -15,7 +15,7 @@ import urllib.robotparser
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
-UA = "PlainworkGeoCheck/0.1 (+https://fanzemeng31-arch.github.io/plainwork/)"
+UA = "FanzStudioGeoCheck/0.1 (+https://fanzemeng31-arch.github.io/fanzstudio/)"
 TIMEOUT = 15
 MAX_BYTES = 2 * 1024 * 1024
 MAX_REQUESTS = 6

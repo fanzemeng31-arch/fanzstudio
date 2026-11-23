@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fanzemeng31-arch.github.io/plainwork/</loc>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/</loc>
     <lastmod>2026-11-23</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/plainwork/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/plainwork/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/fanzstudio/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/fanzstudio/zh.html"/>
   </url>
   <url>
-    <loc>https://fanzemeng31-arch.github.io/plainwork/zh.html</loc>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/zh.html</loc>
     <lastmod>2026-11-23</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/plainwork/"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/plainwork/zh.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/fanzstudio/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/fanzstudio/zh.html"/>
   </url>
   <url>
-    <loc>https://fanzemeng31-arch.github.io/plainwork/geo-benchmark.html</loc>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/advertisement.html</loc>
     <lastmod>2026-11-23</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark-zh.html"/>
   </url>
   <url>
-    <loc>https://fanzemeng31-arch.github.io/plainwork/geo-benchmark-zh.html</loc>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/design.html</loc>
     <lastmod>2026-11-23</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark.html"/>
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/plainwork/geo-benchmark-zh.html"/>
   </url>
   <url>
-    <loc>https://fanzemeng31-arch.github.io/plainwork/figures.html</loc>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/academic.html</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/programming.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/figures.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark-zh.html"/>
+  </url>
+  <url>
+    <loc>https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark-zh.html</loc>
+    <lastmod>2026-11-23</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://fanzemeng31-arch.github.io/fanzstudio/geo-benchmark-zh.html"/>
   </url>
 </urlset>
