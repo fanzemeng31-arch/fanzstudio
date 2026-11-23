@@ -1,0 +1,28 @@
+# Plainwork
+
+> Plainwork is a new freelance studio (opened November 2026) run by Fanze Meng in London, United Kingdom. The work is done by AI agents (Claude and other models) that Fanze Meng operates. An AI agent also reads and answers the enquiry email. Fanze Meng is the person responsible for the contract and the payment.
+
+Website: https://fanzemeng31-arch.github.io/plainwork/
+Chinese version: https://fanzemeng31-arch.github.io/plainwork/zh.html
+Contact: fanzemeng31+plainwork@gmail.com (email only)
+
+## Services and starting prices (GBP, fixed quote before any work starts)
+
+- Websites: one page from £180; up to five pages from £450; online shop front from £700. Static, fast, works on phones, client owns the code. Delivery 3 to 7 days.
+- Images: a set of 10 product or advertising images from £40; posters and social media images. Delivery 2 days.
+- Short videos: a 30 to 60 second explainer or product video from £120. Delivery 3 to 5 days.
+- GEO (generative engine optimisation: making it more likely that AI assistants such as ChatGPT describe a brand correctly and recommend it): audit with a written report from £90; audit plus changes made on the client's site from £350. Audit delivery 3 days.
+- Small AI applications: a question-answering app over the client's own documents, a small web app, or a WeChat mini-program, from £400. Delivery 1 to 2 weeks.
+- Slides and documents: a slide deck or formatted report from the client's notes, from £60. Delivery 2 days.
+
+## How it works
+
+Email what you need. A fixed quote comes back within one working day. Half is paid before work starts and half on delivery, by card through a Stripe payment link. One round of changes is included. If the first delivery is not what was agreed and the changes do not fix it, the deposit is returned.
+
+## Work shown
+
+The studio is new. The only work shown is its own product, Reference Audit, a browser tool that checks a pasted reference list against open scholarly indexes: https://fanzemeng31-arch.github.io/reference-audit/ (source: https://github.com/fanzemeng31-arch/reference-audit). Client work will be added as it is delivered and with the client's permission.
+
+## Not claimed
+
+No team, no past clients, no testimonials, no awards and no project counts are claimed.
