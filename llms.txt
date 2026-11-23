@@ -1,6 +1,6 @@
 # FanzStudio
 
-> FanzStudio is a studio in the United Kingdom, opened in November 2026 and run by Fanze Meng. It checks whether AI assistants such as ChatGPT can read a small business website, fixes what stops them, builds websites for small businesses in any trade, online shops included, and draws figures for research papers from the client's data, and writes small applications. Fanze Meng, a PhD candidate at University College London and a research assistant at the Chinese Academy of Strategic Studies on Industrial Competency, runs it and is responsible for every job, the contract and the payment.
+> FanzStudio is a studio in the United Kingdom, opened in November 2026 and run by Fanze Meng. It checks whether AI assistants such as ChatGPT can read a small business website, fixes what stops them, builds websites for small businesses in any trade, online shops included, and draws figures for research papers from the client's data, and writes small applications. Fanze Meng, a PhD candidate at University College London and a research assistant at the Chinese Academy of Strategic Studies on Industrial Competency, runs it.
 
 Website: https://fanzstudio.org/
 Chinese version: https://fanzstudio.org/zh.html
@@ -37,6 +37,6 @@ Run on 2026-11-23 on the homepages of 20 manufacturers in the United Kingdom and
 
 The studio is new and shows its own work: the check program, the benchmark above, and Reference Audit, a browser tool that checks a reference list against open scholarly indexes (https://fanzemeng31-arch.github.io/reference-audit/). Client work will be added as it is delivered and with the client's permission.
 
-## Not claimed
+## What to expect
 
-No team, no past clients, no testimonials, no awards and no project counts are claimed. Nobody can control what an AI assistant says.
+Nobody can control what an AI assistant says.
