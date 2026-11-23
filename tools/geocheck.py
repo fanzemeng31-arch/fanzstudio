@@ -207,6 +207,11 @@ def run(arg):
     final = home["final_url"]
     pu = urlparse(final)
     base = "%s://%s" % (pu.scheme, pu.netloc)
+    # A site may live in a folder of its host (https://host/shop/). Crawlers read
+    # robots.txt only at the host root, but a sitemap and llms.txt may sit in the
+    # folder, so those two checks also try the folder of the page.
+    folder = pu.path.rsplit("/", 1)[0].rstrip("/")
+    sub = (base + folder) if folder else None
     html = home["body"]
     facts.update({"final_url": final, "status": home["status"],
                   "seconds_to_response": home["seconds"], "html_bytes": home["bytes"]})
@@ -347,12 +352,20 @@ def run(arg):
         "; ".join("og:%s %s" % (k, "present" if v else "missing") for k, v in og.items()) + "."))
 
     # 8 llms.txt
-    ll = f.get(base + "/llms.txt")
-    ll_ok = (ll["ok"] and ll["status"] == 200 and "<html" not in ll["body"][:500].lower()
-             and "<!doctype" not in ll["body"][:100].lower() and ll["body"].strip() != "")
+    def llms_ok(r):
+        return (r["ok"] and r["status"] == 200 and "<html" not in r["body"][:500].lower()
+                and "<!doctype" not in r["body"][:100].lower() and r["body"].strip() != "")
+    ll_url = base + "/llms.txt"
+    ll = f.get(ll_url)
+    ll_ok = llms_ok(ll)
+    if not ll_ok and sub:
+        ll2 = f.get(sub + "/llms.txt")
+        if llms_ok(ll2):
+            ll, ll_ok, ll_url = ll2, True, sub + "/llms.txt"
     facts["llms_txt"] = ll_ok
+    facts["llms_txt_url"] = ll_url if ll_ok else None
     checks.append(check("llms_txt", "llms.txt", "pass" if ll_ok else "info",
-        "Present (%d bytes)." % ll["bytes"] if ll_ok else
+        "Present at %s (%d bytes)." % (ll_url, ll["bytes"]) if ll_ok else
         "Not found. llms.txt is a proposed convention and AI vendors have not confirmed that they read it."))
 
     # 9 sitemap
@@ -363,15 +376,25 @@ def run(arg):
             break
     named = bool(sm_url)
     sm_url = sm_url or base + "/sitemap.xml"
-    sm = f.get(sm_url)
-    smb = sm["body"] if sm["ok"] and sm["status"] == 200 else ""
-    locs = len(re.findall(r"<loc>", smb, re.I))
-    sm_ok = bool(smb) and ("<urlset" in smb.lower() or "<sitemapindex" in smb.lower())
+
+    def sitemap_at(u):
+        r = f.get(u)
+        b = r["body"] if r["ok"] and r["status"] == 200 else ""
+        ok = bool(b) and ("<urlset" in b.lower() or "<sitemapindex" in b.lower())
+        return ok, len(re.findall(r"<loc>", b, re.I))
+    tried = [sm_url]
+    sm_ok, locs = sitemap_at(sm_url)
+    if not sm_ok and sub and sub + "/sitemap.xml" != sm_url:
+        # the site lives in a folder: look for the sitemap beside the page
+        tried.append(sub + "/sitemap.xml")
+        ok2, locs2 = sitemap_at(tried[-1])
+        if ok2:
+            sm_ok, locs, sm_url, named = True, locs2, tried[-1], False
     facts.update({"sitemap_url": sm_url, "sitemap_named_in_robots": named,
-                  "sitemap_ok": sm_ok, "sitemap_loc_count": locs})
+                  "sitemap_ok": sm_ok, "sitemap_loc_count": locs, "sitemap_tried": tried})
     checks.append(check("sitemap", "Sitemap", "pass" if sm_ok else "attention",
         ("%s answers with %d <loc> entries%s." % (sm_url, locs, " (named in robots.txt)" if named else ""))
-        if sm_ok else "No sitemap found at %s%s." % (sm_url, " (named in robots.txt)" if named else "")))
+        if sm_ok else "No sitemap found at %s%s." % (" or ".join(tried), " (named in robots.txt)" if named else "")))
 
     # 10 contact
     tel = [h for h, _ in p.anchors if h.lower().startswith("tel:")]

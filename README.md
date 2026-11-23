@@ -4,7 +4,7 @@ This is the static website of Plainwork, a studio opened in November 2026 and ru
 
 ## The check program
 
-`tools/geocheck.py` checks how ready a public website is to be read by AI assistants. It needs Python 3.9 or later and nothing else. It makes at most six requests to the site, reads the homepage, `robots.txt`, `llms.txt` and one sitemap file, and names itself in its User-Agent.
+`tools/geocheck.py` checks how ready a public website is to be read by AI assistants. It needs Python 3.9 or later and nothing else. It makes at most six requests to the site, reads the homepage, `robots.txt`, `llms.txt` and the sitemap, and names itself in its User-Agent. When a site lives in a folder of its host (for example `https://host/shop/`), it looks for `llms.txt` and the sitemap in that folder as well as at the top of the host.
 
 ```
 python3 tools/geocheck.py yourdomain.com
