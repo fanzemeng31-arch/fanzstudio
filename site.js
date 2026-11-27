@@ -64,7 +64,7 @@
       gl.uniform1f(U.T, still ? 0 : t); gl.uniform2f(U.M, cur[0], cur[1]);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
       cv.classList.add('is-on');
-      if (!still && seen && !D.hidden) raf = requestAnimationFrame(draw);
+      if (!still && seen && !D.hidden && !root.classList.contains('still')) raf = requestAnimationFrame(draw);
     }
     function kick() { if (!raf) raf = requestAnimationFrame(draw); }
     if (!still) {
@@ -77,10 +77,24 @@
       host.addEventListener('pointerleave', function () { hover = false; });
       new IntersectionObserver(function (en) { seen = en[0].isIntersecting; if (seen) kick(); }).observe(cv);
       D.addEventListener('visibilitychange', kick);
+      D.addEventListener('fz:motion', kick);
     }
     addEventListener('resize', kick);
     kick();
   })();
+
+  /* 1b. Stop and start everything that keeps moving (the rings and the changing headline) */
+  var pbs = [].slice.call(D.querySelectorAll('.pause'));
+  function motion(off) {
+    root.classList.toggle('still', off);
+    pbs.forEach(function (b) { b.setAttribute('aria-pressed', off); b.textContent = off ? b.dataset.play : b.dataset.pause; });
+    try { sessionStorage.setItem('fzStill', off ? '1' : ''); } catch (x) {}
+    D.dispatchEvent(new Event('fz:motion'));
+  }
+  if (!still) {
+    pbs.forEach(function (b) { b.hidden = false; b.addEventListener('click', function () { motion(!root.classList.contains('still')); }); });
+    try { if (sessionStorage.getItem('fzStill') === '1') motion(true); } catch (x) {}
+  }
 
   /* 2. A soft light that follows the pointer over rows and cards */
   D.addEventListener('pointermove', function (e) {
