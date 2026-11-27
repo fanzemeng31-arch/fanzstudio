@@ -2,23 +2,25 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>40 家制造企业网站上的程序检查结果</title>
 <meta name="description" content="一份简短的公开报告：程序检查了英国 20 家和我国 20 家制造企业的首页，看 AI 助手能否读懂。含完整表格和局限说明。">
 <link rel="canonical" href="https://fanzstudio.org/geo-benchmark-zh.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="40 家制造企业网站上的程序检查结果">
-<meta property="og:description" content="一份简短的公开报告：程序检查了英国 20 家和我国 20 家制造企业的首页，看 AI 助手能否读懂。含完整表格和局限说明。">
-<meta property="og:url" content="https://fanzstudio.org/geo-benchmark-zh.html">
-<meta property="og:image" content="https://fanzstudio.org/og.png">
 <link rel="alternate" hreflang="en" href="https://fanzstudio.org/geo-benchmark.html">
 <link rel="alternate" hreflang="zh-Hans" href="https://fanzstudio.org/geo-benchmark-zh.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236a3d1c'/%3E%3Cpath d='M11 25V7h12M11 15.5h9' fill='none' stroke='%23fffaf0' stroke-width='3'/%3E%3C/svg%3E">
-<link rel="preload" href="fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="fonts/plex-sans.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fanzstudio.org/geo-benchmark-zh.html">
+<meta property="og:title" content="40 家制造企业网站上的程序检查结果">
+<meta property="og:description" content="一份简短的公开报告：程序检查了英国 20 家和我国 20 家制造企业的首页，看 AI 助手能否读懂。含完整表格和局限说明。">
+<meta property="og:image" content="https://fanzstudio.org/og.png">
+<meta name="theme-color" content="#100a06">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">
-{
+<script>document.documentElement.classList.add("js");addEventListener("load",function(){if(!window.__fz)document.documentElement.classList.remove("js")})</script>
+<script src="site.js" defer></script>
+<script type="speculationrules">{"prerender":[{"where":{"or":[{"href_matches":"/"},{"href_matches":"/*.html"}]},"eagerness":"moderate"}]}</script>
+<script type="application/ld+json">{
  "@context": "https://schema.org",
  "@type": "ProfessionalService",
  "name": "FanzStudio",
@@ -31,31 +33,24 @@
  },
  "description": "一份简短的公开报告，说明检查程序在英国 20 家和我国 20 家制造企业网站的首页上发现了什么。",
  "inLanguage": "zh-Hans"
-}
-</script>
+}</script>
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
-<header class="top"><div class="wrap barrow"><a class="brand" href="zh.html">FanzStudio</a><nav class="sections" aria-label="栏目"><a href="zh.html#advertisement">推广</a><a href="zh.html#design">设计</a><a href="zh.html#academic">学术</a><a href="zh.html#programming">开发</a><a href="zh.html#about">关于我</a><a href="zh.html#contact">联系</a></nav><nav aria-label="语言"><a class="lang" href="geo-benchmark.html" hreflang="en" lang="en">English</a></nav></div></header>
+<header class="top"><a class="brand" href="zh.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5"/><path d="M2.5 13a8.5 8.5 0 0 1 8.5 8.5M2.5 7.5a14 14 0 0 1 14 14"/></svg>FanzStudio</a><nav id="nav" aria-label="主导航"><a href="#advertisement">推广</a><a href="#design">设计</a><a href="#academic">学术</a><a href="#programming">开发</a><a href="#about">关于我</a><a href="index.html" lang="en">English</a></nav><a class="btn btn--sm" href="#contact">获取报价</a><button class="menu btn btn--ghost btn--sm" type="button" aria-expanded="false" aria-controls="nav">菜单</button></header>
 <main id="main">
-<div class="doc"><div class="wrap"><p class="eyebrow">报告</p><h1>40 家制造企业网站上的程序检查结果</h1><p class="lede">有些买家请 AI 助手推荐供应商。助手只能介绍网站能被它读懂的公司。这份报告说明 40 家制造企业的网站在多大程度上能被程序读懂。</p><section><h2>检查了什么，为什么检查</h2><div class="body"><p>程序 <a href="tools/geocheck.py">geocheck.py</a>（0.1 版）在 2026-11-23 检查了每个网站的首页。检查内容包括 HTTPS、robots.txt、不运行 JavaScript 时能看到多少文字、页面描述、结构化数据、站点地图、llms.txt，以及机器可以读取的联系方式。目的是了解哪些基本问题比较常见。</p>
-<p>表中前两行以全部 40 家网站为基数。其余各行只以能够完成检查的网站为基数。网站没有响应，或者测试所用网络的运营商用自己的过滤页面代替了该网站，都算作无法完成检查。通过 HTTPS 访问失败的网站，会再试其 www 地址，然后再试普通 HTTP。</p></div></section><section class="wide"><h2>结果</h2><div class="body"><p>每个单元格依次写明有该问题的网站数、基数网站数和百分比。</p>
-<div class="tablewrap" tabindex="0" role="region" aria-label="检查结果"><table><thead><tr><th>发现</th><th>英国</th><th>我国</th><th>合计</th></tr></thead><tbody><tr><td>无法完成检查</td><td>0 of 20 (0%)</td><td>2 of 20 (10%)</td><td>2 of 40 (5%)</td></tr><tr><td>裸域名和 www 地址都没有可用的 HTTPS</td><td>0 of 20 (0%)</td><td>5 of 20 (25%)</td><td>5 of 40 (12%)</td></tr><tr><td>robots.txt 禁止了八个主要 AI 爬虫中的至少一个</td><td>0 of 20 (0%)</td><td>1 of 18 (6%)</td><td>1 of 38 (3%)</td></tr><tr><td>存在 Content-Signal 行</td><td>0 of 20 (0%)</td><td>0 of 18 (0%)</td><td>0 of 38 (0%)</td></tr><tr><td>不运行 JavaScript 时文字少于 150 词</td><td>1 of 20 (5%)</td><td>2 of 18 (11%)</td><td>3 of 38 (8%)</td></tr><tr><td>没有 meta 描述</td><td>1 of 20 (5%)</td><td>9 of 18 (50%)</td><td>10 of 38 (26%)</td></tr><tr><td>完全没有 JSON-LD</td><td>4 of 20 (20%)</td><td>14 of 18 (78%)</td><td>18 of 38 (47%)</td></tr><tr><td>没有 Organization 或 LocalBusiness 类型</td><td>5 of 20 (25%)</td><td>14 of 18 (78%)</td><td>19 of 38 (50%)</td></tr><tr><td>没有 Product 类型</td><td>20 of 20 (100%)</td><td>18 of 18 (100%)</td><td>38 of 38 (100%)</td></tr><tr><td>没有站点地图</td><td>3 of 20 (15%)</td><td>9 of 18 (50%)</td><td>12 of 38 (32%)</td></tr><tr><td>没有 llms.txt</td><td>13 of 20 (65%)</td><td>15 of 18 (83%)</td><td>28 of 38 (74%)</td></tr><tr><td>没有机器可读的联系方式（既无 tel: 也无 mailto:）</td><td>6 of 20 (30%)</td><td>8 of 18 (44%)</td><td>14 of 38 (37%)</td></tr></tbody></table></div></div></section><section><h2>网站如何选取</h2><div class="body"><p>20 家英国网站来自 Made in Britain 公开的会员名录（工程行业）。20 家我国网站来自 Valve World Asia 2026 公开的参展商名单。这两个机构都没有参与这项工作。本报告不点名任何公司，也不公布任何单个网站的结果。</p></div></section><section><h2>局限</h2><div class="body"><ul class="list">
+<section class="chero"><canvas class="grain" data-wood="13,1.2,2.1" aria-hidden="true"></canvas><div class="wrap chero__grid"><div><p class="label label--rule rise">报告</p><h1 class="rise" style="--i:1">40 家制造企业网站上的程序检查结果</h1><p class="lead rise" style="--i:2">有些买家请 AI 助手推荐供应商。助手只能介绍网站能被它读懂的公司。这份报告说明 40 家制造企业的网站在多大程度上能被程序读懂。</p></div><div class="rise" style="--i:4"></div></div></section>
+<div class="wrap"><section class="part rv"><h2>检查了什么，为什么检查</h2><div class="body"><p>程序 <a href="tools/geocheck.py">geocheck.py</a>（0.1 版）在 2026-11-23 检查了每个网站的首页。检查内容包括 HTTPS、robots.txt、不运行 JavaScript 时能看到多少文字、页面描述、结构化数据、站点地图、llms.txt，以及机器可以读取的联系方式。目的是了解哪些基本问题比较常见。</p>
+<p>表中前两行以全部 40 家网站为基数。其余各行只以能够完成检查的网站为基数。网站没有响应，或者测试所用网络的运营商用自己的过滤页面代替了该网站，都算作无法完成检查。通过 HTTPS 访问失败的网站，会再试其 www 地址，然后再试普通 HTTP。</p></div></section><section class="part rv"><h2>结果</h2><div class="body"><p>每个单元格依次写明有该问题的网站数、基数网站数和百分比。</p>
+<div class="tablewrap" tabindex="0" role="region" aria-label="检查结果"><table><thead><tr><th>发现</th><th>英国</th><th>我国</th><th>合计</th></tr></thead><tbody><tr><td>无法完成检查</td><td>0 of 20 (0%)</td><td>2 of 20 (10%)</td><td>2 of 40 (5%)</td></tr><tr><td>裸域名和 www 地址都没有可用的 HTTPS</td><td>0 of 20 (0%)</td><td>5 of 20 (25%)</td><td>5 of 40 (12%)</td></tr><tr><td>robots.txt 禁止了八个主要 AI 爬虫中的至少一个</td><td>0 of 20 (0%)</td><td>1 of 18 (6%)</td><td>1 of 38 (3%)</td></tr><tr><td>存在 Content-Signal 行</td><td>0 of 20 (0%)</td><td>0 of 18 (0%)</td><td>0 of 38 (0%)</td></tr><tr><td>不运行 JavaScript 时文字少于 150 词</td><td>1 of 20 (5%)</td><td>2 of 18 (11%)</td><td>3 of 38 (8%)</td></tr><tr><td>没有 meta 描述</td><td>1 of 20 (5%)</td><td>9 of 18 (50%)</td><td>10 of 38 (26%)</td></tr><tr><td>完全没有 JSON-LD</td><td>4 of 20 (20%)</td><td>14 of 18 (78%)</td><td>18 of 38 (47%)</td></tr><tr><td>没有 Organization 或 LocalBusiness 类型</td><td>5 of 20 (25%)</td><td>14 of 18 (78%)</td><td>19 of 38 (50%)</td></tr><tr><td>没有 Product 类型</td><td>20 of 20 (100%)</td><td>18 of 18 (100%)</td><td>38 of 38 (100%)</td></tr><tr><td>没有站点地图</td><td>3 of 20 (15%)</td><td>9 of 18 (50%)</td><td>12 of 38 (32%)</td></tr><tr><td>没有 llms.txt</td><td>13 of 20 (65%)</td><td>15 of 18 (83%)</td><td>28 of 38 (74%)</td></tr><tr><td>没有机器可读的联系方式（既无 tel: 也无 mailto:）</td><td>6 of 20 (30%)</td><td>8 of 18 (44%)</td><td>14 of 38 (37%)</td></tr></tbody></table></div></div></section><section class="part rv"><h2>网站如何选取</h2><div class="body"><p>20 家英国网站来自 Made in Britain 公开的会员名录（工程行业）。20 家我国网站来自 Valve World Asia 2026 公开的参展商名单。这两个机构都没有参与这项工作。本报告不点名任何公司，也不公布任何单个网站的结果。</p></div></section><section class="part rv"><h2>局限</h2><div class="body"><ul class="ticks">
 <li>样本很小，只有 40 家网站，也不是随机抽取的，所以这些数字只描述这几家网站。</li>
 <li>我国的网站大多是阀门等流体控制设备的制造商。</li>
 <li>只检查了首页。产品页的情况可能不同。</li>
 <li>“没有 Product 类型”一行只针对首页。首页通常不带产品数据，所以该行 100% 并不说明这些网站在其他页面没有产品数据。</li>
 <li>HTTPS 测试于 2026-11-23 从英国网络发起。换一个网络或换一天，结果可能不同。</li>
-</ul></div></section><section><h2>关于 llms.txt</h2><div class="body"><p>llms.txt 是一项有人提出的约定，指在网站上放一个纯文本文件，向 AI 助手介绍这个网站。AI 厂商尚未确认它们会读取这个文件。表中列出这一行，是因为它容易检查，不应把它看作必须满足的要求。</p></div></section></div></div>
-<section class="band contact" id="contact"><div class="wrap"><h2>下一步</h2><div><p>您可以在自己的网站上运行这个程序：下载 <a href="tools/geocheck.py">tools/geocheck.py</a>，运行 <code>python3 geocheck.py yourdomain.com</code>。也可以发邮件提交网址，申请免费检查。返回<a href="zh.html">首页</a>。</p><div class="mail"><p class="mail-main"><a class="btn" href="mailto:fanze.meng@fanzstudio.org?subject=Free%20GEO%20check&amp;body=Website:%20">发邮件提交网址</a></p><p class="mail-addr">也可以写信到这个地址： <span class="mail-text">fanze.meng@fanzstudio.org</span></p><p class="mail-addr">如果点击按钮没有反应，说明这台电脑没有设置邮件程序。请复制邮箱地址，或使用下面的网页邮箱链接。</p><p class="mail-tools"><button type="button" class="btn-copy" data-copy="fanze.meng@fanzstudio.org" data-label="复制邮箱地址" data-done="已复制" hidden>复制邮箱地址</button><span class="vh copy-status" role="status" aria-live="polite"></span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fanze.meng%40fanzstudio.org&amp;su=Free%20GEO%20check&amp;body=Website%3A%20" target="_blank" rel="noopener">在 Gmail 中打开</a><a href="https://outlook.live.com/mail/0/deeplink/compose?to=fanze.meng%40fanzstudio.org&amp;subject=Free%20GEO%20check&amp;body=Website%3A%20" target="_blank" rel="noopener">在 Outlook 中打开</a></p></div></div></div></section>
+</ul></div></section><section class="part rv"><h2>关于 llms.txt</h2><div class="body"><p>llms.txt 是一项有人提出的约定，指在网站上放一个纯文本文件，向 AI 助手介绍这个网站。AI 厂商尚未确认它们会读取这个文件。表中列出这一行，是因为它容易检查，不应把它看作必须满足的要求。</p></div></section></div>
+<section class="band" id="contact"><div class="wrap band__grid"><div class="rv"><h2>下一步</h2><p>您可以在自己的网站上运行这个程序：下载 <a href="tools/geocheck.py">tools/geocheck.py</a>，运行 <code>python3 geocheck.py yourdomain.com</code>。也可以发邮件提交网址，申请免费检查。返回<a href="zh.html">首页</a>。</p></div><div class="rv" style="--i:1"><div class="mail"><a class="btn" href="mailto:fanze.meng@fanzstudio.org?subject=Free%20GEO%20check&amp;body=Website%3A%20">发邮件提交网址 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><p class="mail__addr"><span class="mail-text">fanze.meng@fanzstudio.org</span></p><p class="mail__alt"><button type="button" class="btn btn--ghost btn--sm" data-copy="fanze.meng@fanzstudio.org" data-label="复制邮箱地址" data-done="已复制" hidden>复制邮箱地址</button><span class="vh" role="status" aria-live="polite"></span><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fanze.meng%40fanzstudio.org&amp;su=Free%20GEO%20check&amp;body=Website%3A%20" target="_blank" rel="noopener">在 Gmail 中打开</a><a href="https://outlook.live.com/mail/0/deeplink/compose?to=fanze.meng%40fanzstudio.org&amp;subject=Free%20GEO%20check&amp;body=Website%3A%20" target="_blank" rel="noopener">在 Outlook 中打开</a></p><p class="mail__note">如果点击按钮没有反应，说明这台电脑没有设置邮件程序。请复制邮箱地址，或使用上面的网页邮箱链接。</p></div></div></div></section>
 </main>
-<footer class="site"><div class="wrap"><p>FanzStudio，英国，2026 年 11 月开业，由 Fanze Meng 经营。<a href="llms.txt">供 AI 助手阅读的纯文本简介</a>。</p></div></footer>
-<script>
-document.querySelectorAll('[data-copy]').forEach(function(b){b.hidden=false;var box=b.closest('.mail'),s=box.querySelector('.copy-status');
-b.addEventListener('click',function(){var done=function(){b.textContent=b.getAttribute('data-done');if(s)s.textContent=b.getAttribute('data-done');
-setTimeout(function(){b.textContent=b.getAttribute('data-label');if(s)s.textContent=''},2000)};
-var pick=function(){var r=document.createRange();r.selectNodeContents(box.querySelector('.mail-text'));var g=getSelection();g.removeAllRanges();g.addRange(r);try{document.execCommand('copy')}catch(x){}done()};
-if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(b.getAttribute('data-copy')).then(done,pick)}else{pick()}})});
-</script>
+<footer class="foot"><span>FanzStudio，英国。由 Fanze Meng 经营。</span><a href="llms.txt">供 AI 助手阅读的纯文本摘要</a><a href="geo-benchmark-zh.html">40 家网站的检查报告</a><a href="https://github.com/fanzemeng31-arch/fanzstudio">本网站的源代码</a></footer>
 </body>
 </html>

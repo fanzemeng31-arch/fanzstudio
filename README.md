@@ -15,3 +15,12 @@ Contact: fanze.meng@fanzstudio.org
 ```
 python3 tools/geocheck.py yourdomain.com
 ```
+
+## How the pages are made
+
+The pages are plain HTML with one stylesheet (`style.css`) and one script (`site.js`). There is no framework, no tracking and no request to another host.
+The moving rings behind the headings are drawn by a WebGL 2 shader of about 2 KB inside `site.js`; where WebGL 2 is missing, `rings.svg` shows instead.
+The 13-point check on the home page and the Advertisement page is run by the visitor's browser on that page each time it loads.
+
+Fonts, all under the SIL Open Font License and served from this site: Instrument Sans, Fraunces (italic, weight 300) and Geist Mono.
+
